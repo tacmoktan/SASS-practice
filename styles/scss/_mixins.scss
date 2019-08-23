@@ -1,0 +1,23 @@
+//mixins
+@mixin banner{
+    position:relative;
+    img{
+        max-width:100%;
+    }
+
+    .banner-content{
+        position:absolute;
+        right:10%;
+        top:30%;
+        padding:$padding;
+    }
+
+    h1{
+        font-size:$section-heading;
+        text-transform:uppercase;
+    }
+
+    p{
+        font-size:$section-slogan;
+    }
+}

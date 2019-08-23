@@ -1,0 +1,55 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@import 'scss/_variables';
+@import 'scss/_mixins';
+
+#banner-one{ 
+    @include banner;  
+    margin-bottom:50px;    
+}
+
+#banner-two{
+    @include banner;
+    h1, p{
+        color:white;
+    }
+}
+
+header{
+    background:$headfoot-altbgcolor;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: $headfoot-fontcolor;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3{
+        font-size: 2em;
+        padding: $padding;
+        background: $headfoot-bgcolor;
+        color: $headfoot-altcolor;
+        border-radius: 15px;
+    }
+}
+
+#navbar{
+    a{
+        text-decoration: none;
+        color:$headfoot-fontcolor;
+        text-transform: uppercase;
+        padding: $padding;
+        font-weight: bold;
+    }
+    a:nth-last-child(1){  
+        margin-right:10vw;
+    }
+    a:hover{
+        color:black;
+    }
+}
