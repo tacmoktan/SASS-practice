@@ -6,29 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SASS practice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="scss/styles.scss" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="#">Link1</a>
-            <a href="#">Link2</a>
-            <a href="#">Link3</a>
-        </nav>
-    </header>
+    <container>
+        <header>
+            <h3>SASS</h3>
+            <nav id="navbar">
+                <a href="#banner-one">Link1</a>
+                <a href="#banner-two">Link2</a>
+                <a href="#">Link3</a>
+                <a href="#">Link4</a>
+            </nav>
+        </header>
 
-    <main>
-        <section>
-            <h1>Header 1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quo enim voluptatum expedita velit quaerat deleniti. Facere laudantium placeat sint illo, voluptate optio alias ratione sequi necessitatibus molestias, neque esse!</p>
-        </section>
-        <section>
-            <h1>Header 2</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ex necessitatibus doloribus aliquam, nostrum iusto animi explicabo, doloremque cupiditate dolore corporis possimus recusandae voluptas odio veniam distinctio mollitia! Veritatis, quidem.</p>
-        </section>
-    </main>
+        <main>
+            <section id="banner-one">
+                <img src="images/ballpen.jpg" alt="ballpen" />
+                <div class="banner-content">
+                    <h1>Title 1</h1>
+                    <p>Some logical slogan</p>
+                </div>
+            </section>
 
+
+            <section id="banner-two">
+                <img src="images/ruleworld.jpg" alt="ruleworld" />
+                <div class="banner-content">
+                    <h1>Title 2</h1>
+                    <p>Some logical slogan</p>
+                </div>
+            </section>
+        </main>
+    </container>
 </body>
 
 </html>
