@@ -1,6 +1,7 @@
 # SASS
 * Syntactically Awesome Style Sheets
 * CSS preprocessor
+* CSS on steroids :laughing:
 
 ## Topics
 1. Variables
@@ -28,3 +29,7 @@
 7. Built-in functions
     * [source](https://sass-lang.com/documentation/functions)
     * [example](styles/styles.scss) : `lighten`, `darken`, `complement`(*color functions*) etc.
+
+8. The `@content` keyword
+    * Used for responsive layout.
+    * [example](styles/scss/_mixins.scss)
