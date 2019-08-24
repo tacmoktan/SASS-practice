@@ -2,11 +2,14 @@
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
 #banner-one {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
+  padding-top: 70px;
+  margin-top: -70px;
 }
 
 #banner-one img {
@@ -20,17 +23,41 @@
   padding: 15px 25px;
 }
 
+@media screen and (max-width: 720px) {
+  #banner-one .banner-content {
+    top: 60%;
+    right: 5%;
+  }
+}
+
 #banner-one h1 {
   font-size: 3em;
   text-transform: uppercase;
+  position: relative;
+}
+
+@media screen and (max-width: 720px) {
+  #banner-one h1 {
+    font-size: 1.5em;
+  }
 }
 
 #banner-one p {
   font-size: 2em;
+  font-style: italic;
+}
+
+@media screen and (max-width: 720px) {
+  #banner-one p {
+    font-size: 1em;
+  }
 }
 
 #banner-two {
   position: relative;
+  margin-bottom: 70px;
+  padding-top: 70px;
+  margin-top: -70px;
 }
 
 #banner-two img {
@@ -44,13 +71,34 @@
   padding: 15px 25px;
 }
 
+@media screen and (max-width: 720px) {
+  #banner-two .banner-content {
+    top: 60%;
+    right: 5%;
+  }
+}
+
 #banner-two h1 {
   font-size: 3em;
   text-transform: uppercase;
+  position: relative;
+}
+
+@media screen and (max-width: 720px) {
+  #banner-two h1 {
+    font-size: 1.5em;
+  }
 }
 
 #banner-two p {
   font-size: 2em;
+  font-style: italic;
+}
+
+@media screen and (max-width: 720px) {
+  #banner-two p {
+    font-size: 1em;
+  }
 }
 
 #banner-two h1, #banner-two p {
@@ -59,33 +107,39 @@
 
 header {
   background: #ffffff94;
+  color: #464646;
   position: fixed;
   width: 100%;
+  height: 70px;
   top: 0;
-  color: #464646;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-header h3 {
+header h3.logo {
   font-size: 2em;
-  padding: 15px 25px;
+  padding: 5px 25px;
   background: #494949;
-  color: #e9e9e9;
   border-radius: 15px;
+  margin-right: auto;
+}
+
+header h3.logo a {
+  text-decoration: none;
+  color: #e9e9e9;
 }
 
 #navbar a {
   text-decoration: none;
-  color: #464646;
+  color: #6c6c6c;
   text-transform: uppercase;
   padding: 15px 25px;
   font-weight: bold;
@@ -97,5 +151,50 @@ header h3 {
 
 #navbar a:hover {
   color: black;
+}
+
+#section-process {
+  text-align: center;
+  padding-top: 70px;
+  margin-top: -70px;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+#section-process h1 {
+  font-size: 3em;
+}
+
+@media screen and (max-width: 720px) {
+  #section-process h1 {
+    font-size: 1.5em;
+  }
+}
+
+#process {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#process .operation {
+  text-align: center;
+  width: 23.33333%;
+  min-width: 300px;
+  padding: 15px 25px;
+}
+
+#process .operation .process-img {
+  max-width: 100%;
+  height: 200px;
+}
+
+#process .operation h3 {
+  text-transform: uppercase;
+  margin-top: 25px;
 }
 /*# sourceMappingURL=styles.css.map */

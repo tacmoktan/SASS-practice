@@ -1,6 +1,9 @@
 //mixins
 @mixin banner{
     position:relative;
+    margin-bottom:$marginbottom;
+    padding-top:$paddingtop;
+    margin-top:$margintop;
     img{
         max-width:100%;
     }
@@ -10,14 +13,33 @@
         right:10%;
         top:30%;
         padding:$padding;
+        @include mediaQuery($mediaWidth){
+            top:60%;
+            right:5%;
+        }
     }
 
     h1{
         font-size:$section-heading;
         text-transform:uppercase;
+        position: relative;
+        @include mediaQuery($mediaWidth){
+            font-size:$small-heading;
+        }
     }
 
     p{
         font-size:$section-slogan;
+        font-style: italic;
+        
+        @include mediaQuery($mediaWidth){
+            font-size:$small-slogan;
+        }
+    }
+}
+
+@mixin mediaQuery($width){
+    @media screen and (max-width:$width) {
+        @content;
     }
 }

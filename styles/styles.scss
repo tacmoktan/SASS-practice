@@ -2,14 +2,14 @@
     padding:0;
     margin:0;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior:smooth;
 }
 
 @import 'scss/_variables';
 @import 'scss/_mixins';
 
 #banner-one{ 
-    @include banner;  
-    margin-bottom:50px;    
+    @include banner;     
 }
 
 #banner-two{
@@ -21,35 +21,81 @@
 
 header{
     background:$headfoot-altbgcolor;
+    color: $headfoot-fontcolor;
     position: fixed;
     width: 100%;
+    height:$navbarHeight;
     top: 0;
-    color: $headfoot-fontcolor;
     z-index: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    h3{
+    
+    h3.logo{
         font-size: 2em;
-        padding: $padding;
+        padding: 5px 25px;
         background: $headfoot-bgcolor;
-        color: $headfoot-altcolor;
         border-radius: 15px;
+        margin-right:auto;
+
+        a{
+            text-decoration:none;
+            color: $headfoot-altcolor;
+        }
     }
+
 }
 
 #navbar{
     a{
         text-decoration: none;
-        color:$headfoot-fontcolor;
+        color:lighten($headfoot-fontcolor, 15%);
         text-transform: uppercase;
         padding: $padding;
         font-weight: bold;
-    }
-    a:nth-last-child(1){  
-        margin-right:10vw;
-    }
-    a:hover{
-        color:black;
+
+        &:nth-last-child(1){
+            margin-right:10vw;
+        }
+
+        &:hover{
+            color:darken($headfoot-fontcolor, 50%);     //color functions
+        }
     }
 }
+
+#section-process{
+    text-align: center;
+    padding-top: $paddingtop;          //height of navbar
+    margin-top: $margintop;
+    margin-bottom:$marginbottom;
+    text-align: center;
+    h1{
+        font-size:$section-heading;
+        @include mediaQuery($mediaWidth){
+            font-size:$small-heading;
+        }
+    }
+}
+
+#process{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    .operation{
+        text-align: center;
+        width:(70%/3);      //mathematical operator
+        min-width:300px;
+        padding:$padding;
+        .process-img{
+            max-width:100%;
+            height:200px;
+        }
+        h3{
+            text-transform: uppercase;
+            margin-top:25px;
+        }
+
+    }    
+}
+
